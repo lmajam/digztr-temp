@@ -3,8 +3,8 @@ web version of digztr platform
 
 # install
 
-npm install
-cd digztr && npm install
+npm install <br />
+cd digztr && npm install <br />
 cd .. && cp .env.example.sh .env.sh
 
 # to run
