@@ -4,6 +4,12 @@ const mongoose = require('mongoose');
 const config = require('./config/config');
 const app = require('./config/express');
 
+// make bluebird default Promise
+Promise = require('bluebird'); // eslint-disable-line no-global-assign
+
+// plugin bluebird promise in mongoose
+mongoose.Promise = Promise;
+
 // connect to mongo db
 const mongoUri = `mongodb://${config.db.username}:${config.db.password}@${config.db.host}`;
 mongoose.connect(mongoUri, { server: { socketOptions: { keepAlive: 1 } } });

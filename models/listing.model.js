@@ -21,7 +21,11 @@ const ListingSchema = new mongoose.Schema({
   meta: {
     type: [],
     require: false
-  }
+  },
+  nearbyHomes: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'listings'
+  }]
 });
 
 /**
@@ -39,6 +43,7 @@ ListingSchema.statics = {
   */
   list() {
     return this.find()
+    .populate('nearbyHomes')
     .exec();
   }
 }
