@@ -15,6 +15,7 @@ const initialState = {
   interiors: [],
   construction: [],
   nearbyHomes: [],
+  headerImages: [],
 }
 
 /**

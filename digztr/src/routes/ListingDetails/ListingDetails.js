@@ -166,6 +166,16 @@ class DetailBody extends Component {
 }
 
 class ListingDetails extends Component {
+  renderHeaderImages() {
+    return (
+      this.props.listing.headerImages.map((item,index) => {
+        return (
+          <img key={index} className="img-item" src={item.image} alt="" />
+        )
+      })
+    );
+
+  }
   renderCarousel(){
     return (
       <div id="img-carousel">
@@ -182,15 +192,9 @@ class ListingDetails extends Component {
           </div>
         </div>
         <div className="img-container">
-          <img className="img-item" src={require("../../assets/jpeg/01.jpg")} alt="" />
-          <img className="img-item" src={require("../../assets/jpeg/02.jpg")} alt="" />
-          <img className="img-item" src={require("../../assets/jpeg/03.jpg")} alt="" />
-          <img className="img-item" src={require("../../assets/jpeg/01.jpg")} alt="" />
-          <img className="img-item" src={require("../../assets/jpeg/02.jpg")} alt="" />
-          <img className="img-item" src={require("../../assets/jpeg/03.jpg")} alt="" />
-          <img className="img-item" src={require("../../assets/jpeg/01.jpg")} alt="" />
-          <img className="img-item" src={require("../../assets/jpeg/02.jpg")} alt="" />
-          <img className="img-item" src={require("../../assets/jpeg/03.jpg")} alt="" />
+          {this.renderHeaderImages()}
+          {this.renderHeaderImages()}
+          {this.renderHeaderImages()}
         </div>
       </div>
     );
