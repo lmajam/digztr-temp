@@ -1,11 +1,15 @@
 # digztrweb
 web version of digztr platform
 
-# install
+# to install api
 
 npm install <br />
-cd digztr && npm install <br />
-cd .. && cp .env.example.sh .env.sh
+cp env.example.sh env.sh <br />
+configure variables in env.sh
+
+# to install app
+
+cd digztr && npm install
 
 # to run
 
