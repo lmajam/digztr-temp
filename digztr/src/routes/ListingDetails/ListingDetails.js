@@ -19,6 +19,8 @@ import MortgageRateCalculator from './components/MortgageRateCalculator';
 import MortgageCalculator from './components/MortgageCalculator';
 import NeighborhoodFacilities from './components/NeighborhoodFacilities';
 import NearbyHomes from './components/NearbyHomes';
+import Subscribe from './components/Subscribe';
+import SupportCenter from './components/SupportCenter';
 
 import headerImage from '../../assets/jpeg/01.jpg';
 
@@ -159,7 +161,6 @@ class DetailBody extends Component {
           price={this.props.listing.price}
           />
         <NeighborhoodFacilities />
-
       </div>
     )
   }
@@ -270,6 +271,8 @@ class ListingDetails extends Component {
         <NearbyHomes
           homes={this.props.listing.nearbyHomes}
           />
+        <Subscribe />
+        <SupportCenter />
       </div>
     )
   }

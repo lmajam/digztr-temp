@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import Nav from './components/Nav';
+import Footer from './components/Footer';
 
 const Listing = require('./routes/ListingDetails/ListingDetails').default;
 class Header extends Component {
@@ -18,6 +19,7 @@ class App extends Component {
       <div id="root">
         <Header />
         {this.props.children || <Listing />}
+        <Footer />
       </div>
     );
   }
